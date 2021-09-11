@@ -1,29 +1,73 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+  env: {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "react-native/react-native": true
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+  ],
+  parserOptions: {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "impliedStrict": true,
+  },
+  plugins: [
+    "react",
+    "react-native"
+  ],
+  rules: {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "func-call-spacing": ["error", "never"],
+    "id-denylist": ["error", "data", "err", "e", "cb", "callback", "item", "count"],
+    "id-length": ["error", { "min": 3 }],
+    "key-spacing": ["error"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "keyword-spacing": ["error"],
+    "lines-between-class-members": ["error", "always"],
+    "max-depth": ["error", 4],
+    "max-len": ["error", { "code": 120 }],
+    "max-nested-callbacks": ["error", 3],
+    "max-statements-per-line": ["error", { "max": 1 }],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+    "no-multi-assign": ["error", { "ignoreNonDeclaration": true }],
+    "no-nested-ternary": ["error"],
+    "no-trailing-spaces": ["error"],
+    "one-var": ["error", "never"],
+    "semi-spacing": "error",
+    "semi-style": ["error", "last"],
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "spaced-comment": ["error", "always"],
+    "switch-colon-spacing": "error",
+    "template-tag-spacing": "error",
+    "arrow-body-style": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "arrow-spacing": "error",
+    "no-duplicate-imports": "error",
+    "no-useless-constructor": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "react/no-danger": "error",
+    "react/no-multi-comp": "error",
+    "react/no-unused-prop-types": "error",
+    "react/no-unused-state": "error",
+    "react/prefer-read-only-props": "error",
+    "react/style-prop-object": "error",
+    "react/state-in-constructor": ["error", "always"],
+    "react/self-closing-comp": "error",
+    "react-native/no-unused-styles": "error",
+    "react-native/no-raw-text": "error",
+    "react-native/no-inline-styles": "error",
+    "react-native/no-color-literals": "error",
+  }
 };
