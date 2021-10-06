@@ -5,14 +5,14 @@ import { walkthroughable, CopilotStep } from "react-native-copilot";
 
 const WalkthroughableView = walkthroughable(View);
 
-export const TutorialStep = ({ array, insideBlock,  }) => {
+export const TutorialStep = ({ array, insideBlock, style }) => {
 
   return (
     <CopilotStep
       text = {array.text}
       order ={array.order}
       name = {array.name} >
-      <WalkthroughableView >
+      <WalkthroughableView style = {style}>
         {insideBlock}
       </WalkthroughableView>
     </CopilotStep>

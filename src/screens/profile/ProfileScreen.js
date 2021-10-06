@@ -17,78 +17,56 @@ class ProfileScreen extends React.Component {
   render() {
     return (
       <View style={{ justifyContent: "center", alignItems: "center", width: "100%", marginBottom: 50 }}>
-        <CopilotStep
-          text="This is block #1"
-          order={1}
-          name="block1"
-        >
-          <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+        <TutorialStep
+          array={walkthroughMainScreen[1]}
+          style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+          insideBlock={
             <TouchableOpacity onPress={() => this.props.start(false, this.scrollView)}>
               <Text >{`Начать ${"\n"}обучение`}</Text>
             </TouchableOpacity>
-          </CopilotView>
-        </CopilotStep>
+          } />
         <ScrollView ref={(ref) => (this.scrollView = ref)} >
-          <CopilotStep
-            text="This is block #2"
-            order={2}
-            name="block2"
-          >
-            <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+          <TutorialStep
+            array={walkthroughMainScreen[2]}
+            style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+            insideBlock={
               <Text>
                 Block 2
               </Text>
-            </CopilotView>
-          </CopilotStep>
-
-          <CopilotStep
-            text="This is block #3"
-            order={3}
-            name="block3"
-          >
-            <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+            } />
+          <TutorialStep
+            array={walkthroughMainScreen[3]}
+            style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+            insideBlock={
               <Text>
                 Block 3
               </Text>
-            </CopilotView>
-          </CopilotStep>
+            } />
 
-
-          <CopilotStep
-            text="This is block #3"
-            order={4}
-            name="block4"
-          >
-            <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+          <TutorialStep
+            array={walkthroughMainScreen[4]}
+            style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+            insideBlock={
               <Text>
                 Block 4
               </Text>
-            </CopilotView>
-          </CopilotStep>
-
-          <CopilotStep
-            text="This is block #5"
-            order={5}
-            name="block5"
-          >
-            <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+            } />
+          <TutorialStep
+            array={walkthroughMainScreen[5]}
+            style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+            insideBlock={
               <Text>
                 Block 5
               </Text>
-            </CopilotView>
-          </CopilotStep>
-
-          <CopilotStep
-            text="This is block #6"
-            order={6}
-            name="block6"
-          >
-            <CopilotView style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}>
+            } />
+          <TutorialStep
+            array={walkthroughMainScreen[6]}
+            style={{ height: 250, width: 250, borderWidth: 2, marginTop: 20 }}
+            insideBlock={
               <Text>
                 Block 6
               </Text>
-            </CopilotView>
-          </CopilotStep>
+            } />
 
         </ScrollView>
       </View>
